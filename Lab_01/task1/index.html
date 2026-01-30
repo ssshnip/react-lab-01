@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Imperative jQuery Toggle</title>
+
+  <!-- style for highlight -->
+  <style>
+    .highlight {
+      background: yellow;
+    }
+  </style>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <!-- button to toggle highlight -->
+  <button id="toggleBtn">Toggle Highlight</button>
+
+  <!-- paragraph to highlight -->
+  <p id="text">This paragraph will be highlighted.</p>
+
+  <script>
+    // attach click handler to button
+    $('#toggleBtn').on('click', function () {
+      // toggle highlight class on paragraph
+      $('#text').toggleClass('highlight');
+    });
+  </script>
+
+</body>
+</html>
