@@ -1,0 +1,23 @@
+import { useState } from "react";
+
+export default function ArticleItem({ article, onClickRemove }) {
+    const [isOpened, setIsOpened] = useState(false);
+
+    function toggle(e) {
+        e.preventDefault();
+        setIsOpened(!isOpened);
+    }
+
+    return (
+        <li>
+            <a href={`#${article.id}`} onClick={toggle}>
+                {article.title}
+            </a>
+            <button onClick={() => onClickRemove(article.id)}>×</button>
+
+            <p style={{ display: isOpened ? 'block' : 'none' }}>
+                {article.summary}
+            </p>
+        </li>
+    )
+}
